@@ -34,7 +34,7 @@ class :uc:packageServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/:lc:package.php', ':lc:package');
+//        $this->mergeConfigFrom(__DIR__.'/../config/:lc:package.php', ':lc:package');
 
         // Register the service the package provides.
         $this->app->singleton(':lc:package', function ($app) {
@@ -60,31 +60,31 @@ class :uc:packageServiceProvider extends ServiceProvider
     protected function bootForConsole(): void
     {
         // Publishing the configuration file.
-        $this->publishes([
-            __DIR__.'/../config/:lc:package.php' => config_path(':lc:package.php'),
-        ], ':lc:package.config');
+//        $this->publishes([
+//            __DIR__.'/../config/:lc:package.php' => config_path(':lc:package.php'),
+//        ], ':lc:package.config');
 
         // Publishing the views.
-        /*$this->publishes([
-            __DIR__.'/../resources/views' => base_path('resources/views/vendor/dgo'),
-        ], ':lc:package.views');*/
+//        $this->publishes([
+//            __DIR__.'/../resources/views' => base_path('resources/views/vendor/dgo'),
+//        ], ':lc:package.views');
 
         // Publishing the migrations.
-        /*$this->publishes([
-            __DIR__.'/../database/migrations' => database_path('migrations'),
-        ], ':lc:package.migrations');*/
+//        $this->publishes([
+//            __DIR__.'/../database/migrations' => database_path('migrations'),
+//        ], ':lc:package.migrations');
 
         // Publishing assets.
-        /*$this->publishes([
-            __DIR__.'/../resources/assets' => public_path('vendor/dgo'),
-        ], ':lc:package.assets');*/
+//        $this->publishes([
+//            __DIR__.'/../resources/assets' => public_path('vendor/dgo'),
+//        ], ':lc:package.assets');
 
         // Publishing the translation files.
-        /*$this->publishes([
-            __DIR__.'/../resources/lang' => resource_path('lang/vendor/dgo'),
-        ], ':lc:package.lang');*/
+//        $this->publishes([
+//            __DIR__.'/../resources/lang' => resource_path('lang/vendor/dgo'),
+//        ], ':lc:package.lang');
 
         // Registering package commands.
-        // $this->commands([]);
+//        $this->commands([]);
     }
 }
