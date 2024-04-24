@@ -28,6 +28,8 @@ abstract class TestCase extends Testbench
 
     protected function getPackageProviders($app): array
     {
-        return ['Dgo\:uc:package\:uc:packageServiceProvider'];
+        return [
+            'Dgo\:uc:package\:uc:packageServiceProvider'
+        ];
     }
 }
