@@ -2,6 +2,7 @@
 
 namespace Dgo\:uc:package\Tests;
 
+use Dgo\Cornerstone\CornerstoneServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Foundation\Testing\Concerns\InteractsWithViews;
 use Orchestra\Testbench\TestCase as Testbench;
@@ -29,7 +30,8 @@ abstract class TestCase extends Testbench
     protected function getPackageProviders($app): array
     {
         return [
-            'Dgo\:uc:package\:uc:packageServiceProvider'
+            'Dgo\:uc:package\:uc:packageServiceProvider',
+            CornerstoneServiceProvider::class
         ];
     }
 }
